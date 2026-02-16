@@ -7,11 +7,11 @@ The application allows users to log in with Google, add bookmarks, view them in 
 
 ## Live Demo
 
-(Add your Vercel URL here)
+[Link](https://smart-bookmark-app-gilt-delta.vercel.app/)
 
 ## GitHub Repository
 
-(Add your repo link here)
+[Link](https://github.com/anchitjulaniya/smart-bookmark-App)
 
 ---
 
