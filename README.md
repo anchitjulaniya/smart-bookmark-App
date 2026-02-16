@@ -198,6 +198,27 @@ This ensures bookmarks update across multiple tabs without refreshing.
 
 ---
 
+## Challenges Faced & How I Solved Them
+
+### 1. Google OAuth Configuration
+**Problem:**  
+Setting up Google authentication required configuring redirect URLs correctly across Google Cloud, Supabase, and the deployed application. Incorrect URLs caused login failures during testing.
+
+**Solution:**  
+I configured the Supabase callback URL in Google Cloud OAuth credentials and added both local and production URLs in Supabase authentication settings. After deployment, I re-tested the login flow to ensure it worked in production.
+
+---
+
+### 2. Ensuring User Privacy with Row Level Security
+**Problem:**  
+Bookmarks needed to be private so that each user could only see their own data.
+
+**Solution:**  
+I enabled Row Level Security (RLS) in Supabase and created policies restricting access using:
+```sql
+user_id = auth.uid()
+
+
 ## Running Locally
 
 1. Clone repository
